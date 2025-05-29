@@ -130,7 +130,7 @@ export const businessesNC = [
 {
     num: 6,
     name: "Tacos el Picas",
-    logo: "assets/businesslogos/tacoselpicas.png",
+    logo: "assets/businesslogos/TacosElPicas.png",
     mainColor: "#6D8196",
     menu: "./assets/menus/bigblues.webp",
     social: {
@@ -394,7 +394,7 @@ export const businessesNC = [
 {
     num: 18,
     name: "The Fat Guys",
-    logo: "assets/businesslogos/thefatguys.png",
+    logo: "assets/businesslogos/TheFatGuys.png",
     mainColor: "#ffbb02",
     menu: "./assets/menus/thefatguys.jpg",
     social: {
