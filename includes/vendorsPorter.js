@@ -251,7 +251,7 @@ export const businessesP = [
 {
     num: 11,
     name: "Tacos Regios El Coquis",
-    logo: "assets/businesslogos/tacoselpicas.png",
+    logo: "assets/businesslogos/TacosElPicas.png",
     mainColor: "#6D8196",
     menu: "./assets/menus/bigblues.webp",
     social: {
@@ -301,7 +301,7 @@ export const businessesP = [
 {
     num: 13,
     name: "Chicken Heads",
-    logo: "assets/businesslogos/chickenHeads.png",
+    logo: "assets/businesslogos/ChickenHeads.png",
     mainColor: "#D94446",
     menu: "./assets/menus/thefatguys.jpg",
     social: {
@@ -325,7 +325,7 @@ export const businessesP = [
 {
     num: 14,
     name: "Delizia",
-    logo: "assets/businesslogos/delizia.png",
+    logo: "assets/businesslogos/Delizia.png",
     mainColor: "#1A4A96",
     menu: "./assets/menus/thefatguys.jpg",
     social: {
@@ -349,7 +349,7 @@ export const businessesP = [
 {
     num: 16,
     name: "Azucar",
-    logo: "assets/businesslogos/azucar.png",
+    logo: "assets/businesslogos/Azucar.png",
     mainColor: "#CD1C18",
     menu: "./assets/menus/thefatguys.jpg",
     social: {
@@ -375,7 +375,7 @@ export const businessesP = [
     name: "El Bitute",
     logo: "",
     mainColor: "#FA5053",
-    menu: "./assets/menus/thefatguys.jpg",
+    menu: "./assets/menus/TheFatGuys.jpg",
     social: {
         instagram: "https://www.instagram.com/elbitute3porter/",
         facebook: "",
@@ -399,7 +399,7 @@ export const businessesP = [
     name: "Sofias Antojitos Mexicanos",
     logo: "",
     mainColor: "#50C878",
-    menu: "./assets/menus/thefatguys.jpg",
+    menu: "./assets/menus/TheFatGuys.jpg",
     social: {
         instagram: "https://www.instagram.com/sofias.antojitos/",
         facebook: "",
@@ -517,7 +517,7 @@ export const businessesP = [
 {
     num: 23,
     name: "Mariscos El Malecon",
-    logo: "assets/businesslogos/mariscoselmalecon.png",
+    logo: "assets/businesslogos/MariscosElMalecon.png",
     mainColor: "#38000A",
     menu: "./assets/menus/bigblues.webp",
     social: {
