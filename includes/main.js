@@ -68,11 +68,11 @@ document.head.appendChild(vendorStyleElement);
             <div class="tab-container">
                 <a class="tab-action" id="tabs-top">
                     <span id="tabs-title">${currentPage}</span>
-                    <img src="../assets/tabs-X.png"  id="tabs-x">
+                    <img src="assets/tabs-X.png"  id="tabs-x">
                 </a>
                 <a class="tab-action" href="index.html">Home</a>
-                <a class="tab-action" href= "grandtexasnc.html">Grand Texas New Caney</a>
-                <a class="tab-action" href="porter.html">FM-1314 Porter</a>
+                <a class="tab-action" href= "GrandTexasNC.html">Grand Texas New Caney</a>
+                <a class="tab-action" href="Porter.html">FM-1314 Porter</a>
                 <a class="tab-action">Become a vendor</a>
                 <a class="tab-action">Contact Us</a>
                 <div id="tabs-extra">
