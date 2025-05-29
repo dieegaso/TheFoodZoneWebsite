@@ -1,7 +1,7 @@
 export const eventsNC = [
 {
     name: "Field Day",
-    image: ".assets/events/event3.jpg",
+    image: "assets/events/event3.jpg",
     url: "https://unsplash.com/photos/people-walking-on-park-near-high-rise-buildings-during-daytime-AUmq5VsgL3g",
     description: "Field day at the foodzone where we are going to be dropping food out of people's hands with our games",
     date: ["May 30, 2025"],
