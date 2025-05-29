@@ -77,7 +77,7 @@ document.head.appendChild(vendorStyleElement);
                 <a class="tab-action">Contact Us</a>
                 <div id="tabs-extra">
                     <div id="side-img-container">
-                        <img src="../assets/logo.png" id="side-img">
+                        <img src="assets/logo.png" id="side-img">
                     </div>
                     <div>Copyright</div>
                     <div>Credits</div>
