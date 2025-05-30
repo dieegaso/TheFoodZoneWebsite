@@ -98,8 +98,8 @@ const createSidePanel = function() {
         }
 
         .tab-container {
-            background: linear-gradient(to bottom, var(--side-panel) 0%, var(--side-panel) 75%,var(--sec-color));
-            box-shadow: inset 7.5px 0px 10px -5px rgba(0,0,0,0.25);
+            background-color: var(--sec-color);
+            box-shadow: inset 7.5px 0px 10px -10px var(--third-pale-color);
             width: 65vw;
             max-width: 500px;
             max-height: 100vh;
@@ -257,13 +257,14 @@ function createEventContainer() {
             grid-area: title;
             margin: 0; 
             padding-left: 15px;
-            color: rgba(0,0,0,0.25);
+            color: var(--third-pale-color);
         `;
 
         let eventDescripStyle = `
             grid-area: descr;
             padding-left: 15px;
             margin:0;
+            font-size: clamp(0.75rem,3vw,1rem)
         `;
 
         let eventDateStyle = `
@@ -295,11 +296,11 @@ function createEventContainer() {
             align-items: center;
             text-decoration: none;
             font-weight: 800;
-            color: rgba(0,0,0,0.25);
+            color: var(--third-pale-color);
             width:20px;
             height:20px;
             border-radius: 50%;
-            box-shadow: inset -1px 2px 2px -2px rgba(0,0,0,0.25);
+            box-shadow: inset -1px 2px 2px -2px var(--sec-color);
         `;
 
         const eventImgHtml = event.url
@@ -447,13 +448,13 @@ gridMapGuide.innerHTML = businesses.map(biz =>
 //Check which tab is active (Vendor or events)
 function activeTab(status, tab) {
     if (status && tab === "vendor") {
-        return "box-shadow: inset 0px 10px 5px -5px rgba(0,0,0,0.12);";
+        return "box-shadow: inset 0px 10px 5px -5px var(--third-pale-color);";
     } else if (!status && tab === "vendor") {
-        return "background-color: rgba(0,0,0,0.12); border-bottom-right-radius: 20px;";
+        return "background-color: var(--sec-color); border-bottom-right-radius: 20px;";
     } else if (status && tab === "event") {
-        return "background-color: rgba(0,0,0,0.12); border-bottom-left-radius: 20px;";
+        return "background-color: var(--sec-color); border-bottom-left-radius: 20px;";
     } else {
-        return "box-shadow: inset 0px 10px 5px -5px rgba(0,0,0,0.12);";
+        return "box-shadow: inset 0px 10px 5px -5px var(--third-pale-color);";
     }
 }
 
@@ -466,7 +467,7 @@ function createNavigationVendorStyle() {
         }
         .navigation-select {
             padding: 2rem 1rem;
-            color: rgba(0,0,0, 0.25);
+            color: var(--third-pale-color);
             font-size: 1rem;
             font-weight: 900;
             width: 50%;
@@ -485,7 +486,7 @@ function createNavigationVendorStyle() {
 //swipe left gesture
 function panelSwipe() {
     let touchStartX, touchEndX, touchStartY,touchEndY;
-    const edgeLimit = window.innerWidth - 50;
+    const edgeLimit = window.innerWidth - 100;
     function handleSwipe() {
         const sidepanel = document.querySelector(".side-panel");
         const diffX = touchEndX - touchStartX;

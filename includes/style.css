@@ -3,6 +3,7 @@
     --sec-color:#DBE2EF;
     --third-color:#3F72AF;
     --third-pale-color:#708fb4;
+    --dark-color:#112D4E;
     --side-panel: #F3EEEA;
     /* --main-color:#B17F59;
     --sec-color:#A5B68D;
@@ -45,6 +46,9 @@ body {
 
 /* #region top header */ 
 .top-bar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     background-color: var(--third-color);
@@ -142,6 +146,8 @@ body {
     font-weight: 400;
     background-color: var(--sec-color);
 }
+
+
 /* #endregion */
 
 
@@ -368,12 +374,19 @@ section{
     padding: 0 1.5rem;
 }
 
+#events-section{
+    padding: 1rem 1rem;
+}
+
 #events-container-wrapper {
     position: relative;
     padding: 0 1rem;
     max-height: 65vh;
     overflow-y: auto; /* Force vertical scrollbar */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    border: 2px solid var(--third-color);
+    border-radius: 20px;
+    box-shadow: -2px 2px 10px -5px var(--third-pale-color);
 }
 
 @keyframes appear{
@@ -395,28 +408,73 @@ section{
 }
 
 #pet-front{
-    max-width: 100%;
+    max-width: 75%;
     max-height: 600px;
     border-radius: 25px;
+    box-shadow: -2px 2px 10px -2px var(--third-pale-color);
     filter: brightness(0.75);
+    
+    animation-name: zoom-pet;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
+@keyframes zoom-pet{
+    0%{
 
-footer{
-    display: flex;
-    padding: 1rem;
-    justify-content: right;
-    gap: 10px;
-    color: white;
-    background-color: rgba(0,0,0, 0.25);
+    }
+    50%{
+        transform: rotateZ(0.5deg);
+    }
+    100%{
+        transform: rotateZ(-0.5deg); 
+        scale: 1.05;
+    }
 }
 
 .social-links{
-    width: 40px;
+    width: 30px;
     display: block;
 }
 .social-img{
     max-width: 100%;
 }
 
+.location-address{
+    display: flex;
+    flex-direction:column ;
+    gap: 2rem;
+}
 
+.addresses{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.addresses-title{
+    width: 100vw;
+    margin-top: 0;
+}
+
+.addresses-direction{
+    color: inherit;
+}
+
+.addresses-social{
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+    align-items: end;
+    flex-grow: 1;
+}
+
+footer{
+    padding: 3rem 1rem;
+    justify-content: right;
+    gap: 10px;
+    color: var(--third-color);
+    background-color: var(--sec-color);
+}
