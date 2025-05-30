@@ -243,6 +243,7 @@ document.head.appendChild(vendorStyleElement);
         eventcard.className = "event-card-container";
 
         let containerStyle = `
+            position: relative;
             display: grid;
             grid-template-areas:
                 'img img title title title'
@@ -294,6 +295,22 @@ document.head.appendChild(vendorStyleElement);
             align-self: end;
         `;
 
+        let eventCalendarLink=`
+            position:absolute;
+            top:15%;
+            right:5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+            color: rgba(0,0,0,0.25);
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            box-shadow: inset -1px 2px 2px -2px rgba(0,0,0,0.25);
+            // background-color: red;
+        `;
+
         const eventImgHtml = event.url
             ? `<a style="${eventUrlStyle}" href="${event.url}" target="_blank" rel="noopener noreferrer">
                 <img src="${event.image}" style="${eventImgStyle}">
@@ -312,11 +329,12 @@ document.head.appendChild(vendorStyleElement);
 
         eventcard.innerHTML = `
             <div class="events" style="${containerStyle}">
-            ${eventImgHtml}
-            <h2 class="event-title" style="${eventTitleStyle}">${event.name}</h2>
-            <p class="event-description" style="${eventDescripStyle}">${event.description}</p>
-            ${eventDateHtml}
-            <div class="event-location" style="${eventLocationStyle}">${event.location}</div>
+                ${eventImgHtml}
+                <h2 class="event-title" style="${eventTitleStyle}">${event.name}</h2>
+                <p class="event-description" style="${eventDescripStyle}">${event.description}</p>
+                ${eventDateHtml}
+                <div class="event-location" style="${eventLocationStyle}">${event.location}</div>
+                <a style="${eventCalendarLink}"> + </a>
             </div>
         `;
 
@@ -713,7 +731,6 @@ if(currentPage !== "The FoodZone Park"){
 
             })
         })
-
 }    
 
 // Do this if Main Page
