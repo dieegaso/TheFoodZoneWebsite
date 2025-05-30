@@ -25,15 +25,17 @@
         <div class="banner">
             <img src="assets/logo.png" id="fz-logo">
         </div>
-        <p id="welcome-text"><strong>Welcome to the FoodZone!</strong><br>
-            We’re glad you’re here! The FoodZone is all about great food, good vibes, 
-            and bringing people together. Whether you're stopping by for a quick 
-            bite or spending time with friends and family, there's something for 
-            everyone. Come hungry and enjoy the experience!
-        </p>
+        <div class="welcome-text-container">
+            <p id="welcome-text"><strong>Welcome to the FoodZone!</strong><br>
+                We are glad you are here! The FoodZone is all about great food, good vibes, 
+                and bringing people together. Whether you're stopping by for a quick 
+                bite or spending time with friends and family, there's something for 
+                everyone. Come hungry and enjoy the experience!
+            </p>
+        </div>
     </header>
     <main>
-        <section>
+        <section id="front-page-section">
             <h1 class="section-title">Our Locations</h1>
             <div class="locations">
                 <a href="GrandTexasNC.html" id="gt-animation">
@@ -46,13 +48,15 @@
                 </a>
             </div>
         </section>
-        <section id="events-section">
+        <section id="front-page-section">
             <h1 class="section-title">Upcoming Events</h1>
             <div id="events-container-wrapper">
+                <div class="blur-edges" id="blur-top"></div>
                 <div class="events" id="events-container"></div>
+                <div class="blur-edges" id="blur-bottom"></div>
             </div>
         </section>
-        <section >
+        <section id="front-page-section">
             <h1 class="section-title"> Pet Friendly</h1>
             <div class="front-page-img">
                 <img src="./assets/petFriendly.jpg" id="pet-front" >
@@ -105,7 +109,7 @@
                     </div>
                 </div>
                 <div class="addresses">
-                    <h4 class="addresses-title">The Foodzone Grand Texas</h4>
+                    <h4 class="addresses-title">The Foodzone FM-1314 Porter</h4>
                     <a class="addresses-direction" href="https://www.google.com/maps/place/The+Food+Zone/@30.1105204,-95.2667948,1082m/data=!3m2!1e3!4b1!4m6!3m5!1s0x86474de7db0a4ff3:0x40d622859b654440!8m2!3d30.1105204!4d-95.2642199!16s%2Fg%2F11qq70gshx!5m1!1e2?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D">
                         23242 FM1314<br> Porter, TX 77365
                     </a>

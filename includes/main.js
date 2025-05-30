@@ -69,11 +69,10 @@ const createSidePanel = function() {
                 <a id="side-img-container" href="index.html">
                     <img src="assets/logo.png" id="side-img">
                 </a>
-                <div>Copyright</div>
-                <div>Credits</div>
-                <div>Privacy</div>
                 <div>Contact Us</div>
-                <div>R Diego Barahona</div>
+                <div>Privacy</div>
+                <div>Credits</div>
+                <div>®DBV Studios</div>
             </div>    
         </div>
     `;
@@ -108,7 +107,7 @@ const createSidePanel = function() {
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            padding: 2rem 1rem 3rem 1rem;
+            padding: 2rem 1rem;
         }
         
         .tab-container.show {
@@ -124,7 +123,7 @@ const createSidePanel = function() {
             max-width: 100%;
             border-radius: 10px;
             border-bottom: 1px solid rgb(255, 255, 255);
-            box-shadow: inset -5px 5px 10px -5px rgba(0,0,0,0.1);
+            box-shadow: inset -5px 5px 5px -5px var(--third-pale-color);
         }
         
         .tab-action:hover{
@@ -689,7 +688,7 @@ if(currentPage !== "The FoodZone Park"){
                 
                 if(index === -1){ // Create " For Rent Sign "
                     mColor = "black";
-                    forRent = "../assets/rent.png"
+                    forRent = "assets/rent.png"
                 }else{
                     mColor = businesses[index].mainColor;
                     //Check Status, Open or Closed

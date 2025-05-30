@@ -319,7 +319,7 @@ export const businessesNC = [
 {
     num: 15,
     name: "Big Blue's BBQ",
-    logo: "assets/businesslogos/BigBluesBBQ.WEBP",
+    logo: "assets/businesslogos/BigBluesBBQ.webp",
     mainColor: "#baae85",
     menu: "./assets/menus/bigblues.webp",
     social: {
