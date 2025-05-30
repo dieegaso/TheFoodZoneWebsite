@@ -4,7 +4,7 @@ export const eventsNC = [
     image: "assets/events/event3.jpg",
     url: "https://unsplash.com/photos/people-walking-on-park-near-high-rise-buildings-during-daytime-AUmq5VsgL3g",
     description: "Field day at the foodzone where we are going to be dropping food out of people's hands with our games",
-    date: ["May 30, 2025"],
+    date: ["Jul 4, 2025"],
     start: "7:00pm",
     location: "Grand Texas"
     
@@ -24,7 +24,7 @@ export const eventsNC = [
     image: "assets/events/event1.jpg",
     url:"https://unsplash.com/photos/man-wearing-green-and-white-ice-hockey-jersey-while-playing-doivHPaG-Vw",
     description: "We are playing Hockey in TEXAS, I dont know but I would come to that If we were you",
-    date: ["May 29, 2025"],
+    date: ["Jul 8, 2025"],
     start: "7:00pm",
     location: "Grand Texas"
     
@@ -34,7 +34,7 @@ export const eventsNC = [
     image: "assets/events/event4.jpg",
     url: "https://unsplash.com/photos/long-coated-brown-animal-MCauAnBJeig",
     description: "As soon as you enter the foodzone, you need to start laughing non-stop until you leave. Or you die :)",
-    date: ["May 31, 2025"],
+    date: ["Jun 18, 2025"],
     start: "7:00pm",
     location: "Grand Texas"
     

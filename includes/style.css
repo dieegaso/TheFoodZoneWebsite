@@ -29,11 +29,6 @@ header{
 
 }
 
-main{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .banner {
     display: flex;
     justify-content: center;
@@ -102,8 +97,13 @@ main{
 /* #endregion */
 
 /* #region main page */
+#navigation-container-section{
+    width: 100%;
+}
+
 .no-events{
     text-align: center;
+    align-content: center;
     font-size: 3ch;
     font-weight: 800;
     color: rgba(0,0,0, 0.25);
@@ -180,14 +180,20 @@ main{
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 2rem 0;
 }
 .map{
-    /* background: rgb(201, 154, 154); */
     position: relative;
     align-self: center;
     padding: 1em 1rem 1rem 1rem;
     max-width: 35rem;
+}
+
+.map svg{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .map img {
@@ -195,8 +201,60 @@ main{
     max-height: 75vh;
     object-fit: contain;
 }
+#grid-map-nc, #grid-map-porter{
+    width: 80%;
+    max-width: 500px;
+    padding: 1rem 5rem;
+}
 
-.grid-space { /* new caney */
+#grid-container-porter{
+    position: absolute;
+    padding: 1rem 5rem;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+}
+
+.grid-space-porter{
+
+    display: grid;
+    /* grid-template-columns: 90px 500px 645px 390px 390px 375px 140px 380px;
+    grid-template-rows: 450px 70px 380px 70px 380px 70px 380px 70px 380px 70px 380px 70px 380px 70px 380px 70px 380px 70px 380px 70px 380px 70px 380px 70px 520px 70px 380px 120px; */
+    grid-template-areas: 
+        ". a21 . a22 a23 . . a24"
+        ". .   . a22   .   . . ."
+        ". a20 . . . . a19 a19"
+        ". .   . .   .   . . ."
+        ". a18 . . . . h h"
+        ". .   . .   .   . h h"
+        ". a17   . .   .   . h h"
+        ". .   . .   .   . . ."
+        ". a16   . .   .   . a15 a15"
+        ". .   . .   .   . a15 a15"
+        ". a14   . .   .   . a15 a15"
+        ". .   . .   .   . . ."
+        ". a12   . .   .   . a13 a13"
+        ". a12   . .   .   . . ."
+        ". a12   . .   .   . a11 a11"
+        ". .   . .   .   . . ."
+        ". a10   . .   .   . a9 a9"
+        ". .   . .   .   . . ."
+        ". a8   . .   .   . a7 a7"
+        ". .   . .   .   . . ."
+        ". a6   . .   .   . g2 g2"
+        ". .   . .   .   . . ."
+        ". a4   . .   .   . a5 a5"
+        ". .   . .   .   . . ."
+        ". .   . .   .   . a3 a3"
+        ". .   . .   .   . . ."
+        ". a2   . .   .   . a1 a1"
+        ". a2   . .   .   . . ."
+        
+}
+
+
+.grid-space-nc { /* new caney */
     position: absolute;
     top: 0; /*make same as .map padding */
     left:0; /*make same as .map padding */
@@ -218,7 +276,6 @@ main{
         ". a4 . . . . . . . . a16 ."
         ". a4 . a3 . a2 a1 . a18 . a17 .";
 
-    /* grid-template-columns: 3% 10.75% 7% 11% 3.75% 14.5% 14.5% 3.75% 11% 7% 10.75% 3%; */
     grid-template-columns: 4% 10.75% 6.75% 11% 3.75% 14% 14% 3.75% 11% 6.75% 10.75% 3%;
     grid-template-rows: 3% 9% 9% 2.5% 9% 9% 2.5% 9% 9% 2.5% 9% 9%;
 }
@@ -227,13 +284,14 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .mb{
     align-content: center;
     text-align: center;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border: 1px solid black;
     border-radius: 50%;
     box-shadow: -2px 2px 2px rgba(0,0,0, 0.15);
@@ -389,7 +447,6 @@ section{
 
 #front-page-section{
     padding: 1rem 1rem;
-    justify-items: center;
 }
 
 #events-container-wrapper {
@@ -478,13 +535,14 @@ section{
 .location-address{
     display: flex;
     flex-direction:column ;
+    align-items: start;
     gap: 2rem;
 }
 
 .addresses{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 1rem;
+    width: min(100%,500px);
 }
 
 .addresses-title{

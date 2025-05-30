@@ -10,20 +10,23 @@ const vendorContainer = document.getElementById("vendors-container");
 
 
 // Get vendors depending on page 
-let businesses, venTotal, events;
+let businesses, venTotal, events, mapRefMod;
 const currentPage = document.title;
 let vendorStatus = true;
+
 
 switch(currentPage){
     case "The Foodzone NC":
         businesses = businessesNC;
         events = eventsNC;
         venTotal = 18;
+        mapRefMod = "nc";
         break
-    case "The Foodzone Porter":
-        businesses = businessesP;
-        events = eventsP;
-        venTotal = 24;
+        case "The Foodzone Porter":
+            businesses = businessesP;
+            events = eventsP;
+            venTotal = 24;
+            mapRefMod = "porter";
         break
     case "The FoodZone Park":
         events = [...eventsP, ...eventsNC]; 
@@ -33,7 +36,7 @@ switch(currentPage){
         businesses = "";
 }
 
-
+console.log(mapRefMod);
 
 const vendorStyleElement = document.createElement("style");
 vendorStyleElement.id = "vendorEventStyle";
@@ -229,7 +232,7 @@ function createEventContainer() {
             if(lastDate - Date.now() < 0){
                 return
             }
-            const eventcard = document.createElement("div");
+        const eventcard = document.createElement("div");
         eventcard.className = "event-card-container";
 
         let containerStyle = `
@@ -348,6 +351,13 @@ function createEventContainer() {
             });
         }
     });
+
+    //If all events passed, return emptyy container
+    if(!document.querySelectorAll(".event-card-container").length){
+        eventContainerhtml.innerHTML = `
+            <div class="no-events"> No events </div>
+        `;
+    };
 }
 
 //Create Business Cards
@@ -389,7 +399,7 @@ function createBusinessCards(){
             <div class= "cards">
                 <img class="business-logo" src="${biz.logo}" alt="${biz.name} logo">
                 <h3 class="b-name">${biz.name}</h3>
-                <a class="vn" href="#grid-map" style="box-shadow: inset -5px 5px 10px -5px ${color};">${biz.num}</a>
+                <a class="vn" href="#grid-map-${mapRefMod}" style="box-shadow: inset -5px 5px 10px -5px ${color};">${biz.num}</a>
                 <p class="description">${biz.description}</p>
                 ${biz.menu ? `
                     <div class="menus">
@@ -430,13 +440,13 @@ function createBusinessCards(){
 }
 
 //Create Map Buttons
-const gridMapGuide = document.querySelector(".grid-space");
+const gridMapGuide = document.querySelector(`.grid-space-${mapRefMod}`);
 function createGridMapBtn(){
-gridMapGuide.innerHTML = businesses.map(biz => 
-    `<div class="mb-container" style="grid-area: a${biz.num};">
-        <a class="mb" id="b-${biz.num}"  style=" cursor:pointer;">${biz.num}</a> 
-    </div>
-    `).join(""); 
+    gridMapGuide.innerHTML = businesses.map(biz => 
+        `<div class="mb-container" style="grid-area: a${biz.num};">
+            <a class="mb" id="b-${biz.num}"  style=" cursor:pointer;">${biz.num}</a> 
+        </div>
+        `).join(""); 
 }
 
 // <---
@@ -572,10 +582,12 @@ function createEmpyVendor(){
             newtag.innerHTML = `
                 <a id="heart">test</a> 
             `;
+            console.log("test");
             newtag.style.cssText =`
                 grid-area: h; 
                 cursor:pointer;
-            `;
+                `;
+            gridMapGuide.appendChild(newtag);
         }else if(!checktag && i !== 0){
             newtag.innerHTML = `
                 <a class="mb" id="b-${i}">${i}</a> 
@@ -584,12 +596,12 @@ function createEmpyVendor(){
                 grid-area: a${i}; 
                 cursor:pointer;
             `;
+            gridMapGuide.appendChild(newtag);
         }
-        gridMapGuide.appendChild(newtag);
     }
 }
 
-// ✅ Helper Functions
+// Functions for calendar add
 function createICS(evt) {
     const startDateObj = parseDate(evt.date[0], evt.start);
     const endDateObj = new Date(startDateObj.getTime() + 60 * 60 * 1000); // +1 hour
@@ -678,8 +690,8 @@ if(currentPage !== "The FoodZone Park"){
         //Show Vendor Preview on Map
         mapIcon.forEach(tag => {
             tag.addEventListener("click", (e)=>{
-                const vendor = document.createElement("div");
-                vendor.className = "temp-info"
+                const vendorMapPreview = document.createElement("div");
+                vendorMapPreview.className = "temp-info"
                 const id = e.target.id.split("-")[1];
                 const index = businesses.findIndex(biz => biz.num == id);
 
@@ -743,7 +755,7 @@ if(currentPage !== "The FoodZone Park"){
                 `;
 
                 if(index !== -1){
-                    vendor.innerHTML= `
+                    vendorMapPreview.innerHTML= `
                         <div style="${logoContainer}">
                             ${businesses[index].logo ? 
                                 `
@@ -759,7 +771,7 @@ if(currentPage !== "The FoodZone Park"){
                         </div>
                     `;
                 }else{ //ADD HREF TO A TAG!!!
-                    vendor.innerHTML= `
+                    vendorMapPreview.innerHTML= `
                         <div style="${logoContainer}">
                             <a style="${astyle}"> 
                                 <img src="${forRent}" style="${imageStyle} ">
@@ -768,7 +780,7 @@ if(currentPage !== "The FoodZone Park"){
                         </div>
                     `
                 }
-                vendor.style.cssText = `
+                vendorMapPreview.style.cssText = `
                     position: absolute;
                     top: 2%;
                     left: 0;
@@ -781,14 +793,14 @@ if(currentPage !== "The FoodZone Park"){
                 `;
 
                 const mapContainer = document.querySelector(".map-container");
-                mapContainer.appendChild(vendor);
+                mapContainer.appendChild(vendorMapPreview);
 
                 setInterval(() => {
-                    vendor.remove()
+                    vendorMapPreview.remove()
                 }, 4000);
 
-                vendor.addEventListener("click",()=>{
-                    vendor.remove();
+                vendorMapPreview.addEventListener("click",()=>{
+                    vendorMapPreview.remove();
                 })
 
                 let venSearch = document.getElementById("vendor-search");

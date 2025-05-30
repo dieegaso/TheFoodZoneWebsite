@@ -14,7 +14,7 @@ export const eventsP = [
     image: "assets/events/event2.jpg",
     url: "https://unsplash.com/photos/yellow-and-white-duck-plush-toy-on-green-grass-during-daytime-DypO_XgAE4Y",
     description: "Some nerds are overpaying for some mid-looking cards",
-    date: ["June 1, 2025"],
+    date: ["June 20, 2025"],
     start: "7:00pm",
     location: "FM-1314 Porter"
     
@@ -23,18 +23,8 @@ export const eventsP = [
     name: "Atropellados",
     image: "assets/events/traffic.jpg",
     url:"https://unsplash.com/photos/a-group-of-cars-driving-down-a-street-next-to-each-other-toaX1dyZjcA?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash",
-    description: "We are making traffict at FM-1314, everyone that comes into the foodzone is supposed to form a line inside the food park and never exit their vehicles",
+    description: "We are making traffict jam at FM-1314, everyone that comes into the foodzone is supposed to form a line inside the food park and never exit their vehicles",
     date: ["May 30, 2025"],
-    start: "7:00pm",
-    location: "FM-1314 Porter"
-    
-},
-{
-    name: "Loteria Night",
-    image: "assets/events/loteria.jpg",
-    url: "https://unsplash.com/photos/blue-white-and-red-playing-cards-clelay10tfg",
-    description: "Come play loteria every thursday from 7:00pm to 8:00pm and win prizes",
-    date: ["May 1, 2025", "Jun 30, 2025"],
     start: "7:00pm",
     location: "FM-1314 Porter"
     
