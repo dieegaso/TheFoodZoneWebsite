@@ -52,7 +52,7 @@ export const businessesP = [
 {
     num: 3,
     name: "Antojitos Catrachos",
-    logo: "assets/businesslogos/jesses.png",
+    logo: "",
     mainColor: "#89CFF0",
     menu: "./assets/menus/raicez.png",
     social: {
@@ -102,7 +102,7 @@ export const businessesP = [
 {
     num: 5,
     name: "La Quesadilla Loca",
-    logo: "assets/businesslogos/sakura.png",
+    logo: "",
     mainColor: "#FF6961",
     menu: "./assets/menus/sakura.jpg",
     social: {
@@ -250,6 +250,30 @@ export const businessesP = [
 },
 {
     num: 11,
+    name: "El Pambazo",
+    logo: "",
+    mainColor: "#2E6F40",
+    menu: "./assets/menus/bigblues.webp",
+    social: {
+        instagram: "https://www.instagram.com/elpambazo/",
+        facebook: "",
+        tiktok:""
+    },
+    description: `We Sell BBQ here and we are about to go broke because we do not
+                    get many customers. idk why, its sus`,
+    hours: {
+        monday: ["10:30am","9:00pm"],
+        tuesday: ["10:30am","10:02pm"],
+        wednesday: ["10:30am","9:00pm"],
+        thursday: ["10:30am","9:00pm"],
+        friday: ["10:30am","9:00pm"],
+        saturday: ["10:30am","9:00pm"],
+        sunday: ["10:30am","9:00pm"]
+    }
+
+},
+{
+    num: 12,
     name: "Tacos Regios El Coquis",
     logo: "assets/businesslogos/TacosElPicas.png",
     mainColor: "#6D8196",
@@ -275,55 +299,7 @@ export const businessesP = [
 
 },
 {
-    num: 12,
-    name: "El Pambazo",
-    logo: "",
-    mainColor: "#2E6F40",
-    menu: "./assets/menus/bigblues.webp",
-    social: {
-        instagram: "https://www.instagram.com/elpambazo/",
-        facebook: "",
-        tiktok:""
-    },
-    description: `We Sell BBQ here and we are about to go broke because we do not
-                    get many customers. idk why, its sus`,
-    hours: {
-        monday: ["10:30am","9:00pm"],
-        tuesday: ["10:30am","10:02pm"],
-        wednesday: ["10:30am","9:00pm"],
-        thursday: ["10:30am","9:00pm"],
-        friday: ["10:30am","9:00pm"],
-        saturday: ["10:30am","9:00pm"],
-        sunday: ["10:30am","9:00pm"]
-    }
-
-},
-{
     num: 13,
-    name: "Chicken Heads",
-    logo: "assets/businesslogos/ChickenHeads.png",
-    mainColor: "#D94446",
-    menu: "./assets/menus/thefatguys.jpg",
-    social: {
-        instagram: "https://www.instagram.com/chickenheadz_htx/",
-        facebook: "",
-        tiktok:""
-    },
-    description: `We sell some good wings here, we also have huge menus in our wall so that you dont be 
-                asking stupid questions. The place is a really dirty inside but who cares. DONT FORGET
-                YOU'RE WINGS`,
-    hours: {
-        monday: ["10:30am","9:00pm"],
-        tuesday: ["10:30am","10:02pm"],
-        wednesday: ["10:30am","9:00pm"],
-        thursday: ["10:30am","9:00pm"],
-        friday: ["10:30am","9:00pm"],
-        saturday: ["10:30am","9:00pm"],
-        sunday: ["10:30am","9:00pm"]
-    }
-},
-{
-    num: 14,
     name: "Delizia",
     logo: "assets/businesslogos/Delizia.png",
     mainColor: "#1A4A96",
@@ -347,7 +323,31 @@ export const businessesP = [
     }
 },
 {
-    num: 16,
+    num: 14,
+    name: "Chicken Heads",
+    logo: "assets/businesslogos/ChickenHeads.png",
+    mainColor: "#D94446",
+    menu: "./assets/menus/thefatguys.jpg",
+    social: {
+        instagram: "https://www.instagram.com/chickenheadz_htx/",
+        facebook: "",
+        tiktok:""
+    },
+    description: `We sell some good wings here, we also have huge menus in our wall so that you dont be 
+                asking stupid questions. The place is a really dirty inside but who cares. DONT FORGET
+                YOU'RE WINGS`,
+    hours: {
+        monday: ["10:30am","9:00pm"],
+        tuesday: ["10:30am","10:02pm"],
+        wednesday: ["10:30am","9:00pm"],
+        thursday: ["10:30am","9:00pm"],
+        friday: ["10:30am","9:00pm"],
+        saturday: ["10:30am","9:00pm"],
+        sunday: ["10:30am","9:00pm"]
+    }
+},
+{
+    num: 15,
     name: "Azucar",
     logo: "assets/businesslogos/Azucar.png",
     mainColor: "#CD1C18",
@@ -396,30 +396,6 @@ export const businessesP = [
 },
 {
     num: 18,
-    name: "Sofias Antojitos Mexicanos",
-    logo: "",
-    mainColor: "#50C878",
-    menu: "./assets/menus/TheFatGuys.jpg",
-    social: {
-        instagram: "https://www.instagram.com/sofias.antojitos/",
-        facebook: "",
-        tiktok:""
-    },
-    description: `We sell all kinds of stuff here, we dont even know exactly 
-                what. We dont include prices in our menu to not scare you away lol.
-                The owner is an annoying guy btw, very entitled`,
-    hours: {
-        monday: ["10:30am","9:00pm"],
-        tuesday: ["10:30am","10:02pm"],
-        wednesday: ["10:30am","9:00pm"],
-        thursday: ["10:30am","9:00pm"],
-        friday: ["10:30am","9:00pm"],
-        saturday: ["10:30am","9:00pm"],
-        sunday: ["10:30am","9:00pm"]
-    }
-},
-{
-    num: 19,
     name: "X-Delicious",
     logo: "assets/businesslogos/xDelicious.png",
     mainColor: "#353E43",
@@ -443,18 +419,19 @@ export const businessesP = [
     }
 },
 {
-    num: 20,
-    name: "Nadia Hair Salon",
+    num: 19,
+    name: "Sofias Antojitos Mexicanos",
     logo: "",
-    mainColor: "#DEA193",
-    menu: "./assets/menus/thefatguys.jpg",
+    mainColor: "#50C878",
+    menu: "./assets/menus/TheFatGuys.jpg",
     social: {
-        instagram: "https://www.instagram.com/nadiashairshop/",
+        instagram: "https://www.instagram.com/sofias.antojitos/",
         facebook: "",
         tiktok:""
     },
-    description: `Random Hair Salon in the middle of the foodzone. Only business that 
-                has worked in the foozone beside food places`,
+    description: `We sell all kinds of stuff here, we dont even know exactly 
+                what. We dont include prices in our menu to not scare you away lol.
+                The owner is an annoying guy btw, very entitled`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -466,21 +443,50 @@ export const businessesP = [
     }
 },
 {
-    num: 21,
-    name: "Milky Shake",
-    logo: "assets/businesslogos/MilkyShake.png",
-    mainColor: "#90D5FF",
-    menu: "./assets/menus/thefatguys.jpg",
+    num: 20,
+    name: "Mariscos El Malecon",
+    logo: "assets/businesslogos/MariscosElMalecon.png",
+    mainColor: "#38000A",
+    menu: "./assets/menus/bigblues.webp",
     social: {
-        instagram: "https://www.instagram.com/milkyshakepr/",
-        facebook: "",
+        phone: "", 
+        instagram: "https://www.instagram.com/mariscoselmalecontx/",
+        facebook: "https://www.facebook.com/profile.php?id=100091666042616&ref=_ig_profile_ac",
         tiktok:""
     },
-    description: `Random Hair Salon in the middle of the foodzone. Only business that 
-                has worked in the foozone beside food places`,
+    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
+                 We also give you beans with your tacos that all you gonna do with them is throw them away
+                 because eso es comida de chanchos
+                `,
     hours: {
-        monday: ["10:30am","9:00pm"],
-        tuesday: ["10:30am","10:02pm"],
+        monday: [],
+        tuesday: ["10:30am","9:00pm"],
+        wednesday: ["10:30am","9:00pm"],
+        thursday: ["10:30am","9:00pm"],
+        friday: ["10:30am","9:00pm"],
+        saturday: ["10:30am","9:00pm"],
+        sunday: ["10:30am","9:00pm"]
+    }
+},
+{
+    num: 21,
+    name: "Dominican Bistro",
+    logo: "",
+    mainColor: "#000000",
+    menu: "./assets/menus/bigblues.webp",
+    social: {
+        phone: "", 
+        instagram: "https://www.instagram.com/mariscoselmalecontx/",
+        facebook: "https://www.facebook.com/profile.php?id=100091666042616&ref=_ig_profile_ac",
+        tiktok:""
+    },
+    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
+                 We also give you beans with your tacos that all you gonna do with them is throw them away
+                 because eso es comida de chanchos
+                `,
+    hours: {
+        monday: [],
+        tuesday: ["10:30am","9:00pm"],
         wednesday: ["10:30am","9:00pm"],
         thursday: ["10:30am","9:00pm"],
         friday: ["10:30am","9:00pm"],
@@ -516,49 +522,20 @@ export const businessesP = [
 },
 {
     num: 23,
-    name: "Mariscos El Malecon",
-    logo: "assets/businesslogos/MariscosElMalecon.png",
-    mainColor: "#38000A",
-    menu: "./assets/menus/bigblues.webp",
+    name: "Milky Shake",
+    logo: "assets/businesslogos/MilkyShake.png",
+    mainColor: "#90D5FF",
+    menu: "./assets/menus/thefatguys.jpg",
     social: {
-        phone: "", 
-        instagram: "https://www.instagram.com/mariscoselmalecontx/",
-        facebook: "https://www.facebook.com/profile.php?id=100091666042616&ref=_ig_profile_ac",
+        instagram: "https://www.instagram.com/milkyshakepr/",
+        facebook: "",
         tiktok:""
     },
-    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
-                 We also give you beans with your tacos that all you gonna do with them is throw them away
-                 because eso es comida de chanchos
-                `,
+    description: `Random Hair Salon in the middle of the foodzone. Only business that 
+                has worked in the foozone beside food places`,
     hours: {
-        monday: [],
-        tuesday: ["10:30am","9:00pm"],
-        wednesday: ["10:30am","9:00pm"],
-        thursday: ["10:30am","9:00pm"],
-        friday: ["10:30am","9:00pm"],
-        saturday: ["10:30am","9:00pm"],
-        sunday: ["10:30am","9:00pm"]
-    }
-},
-{
-    num: 24,
-    name: "Dominican Bistro",
-    logo: "",
-    mainColor: "#000000",
-    menu: "./assets/menus/bigblues.webp",
-    social: {
-        phone: "", 
-        instagram: "https://www.instagram.com/mariscoselmalecontx/",
-        facebook: "https://www.facebook.com/profile.php?id=100091666042616&ref=_ig_profile_ac",
-        tiktok:""
-    },
-    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
-                 We also give you beans with your tacos that all you gonna do with them is throw them away
-                 because eso es comida de chanchos
-                `,
-    hours: {
-        monday: [],
-        tuesday: ["10:30am","9:00pm"],
+        monday: ["10:30am","9:00pm"],
+        tuesday: ["10:30am","10:02pm"],
         wednesday: ["10:30am","9:00pm"],
         thursday: ["10:30am","9:00pm"],
         friday: ["10:30am","9:00pm"],
@@ -567,5 +544,28 @@ export const businessesP = [
     }
 },
 
+{
+    num: 24,
+    name: "Nadia Hair Salon",
+    logo: "",
+    mainColor: "#DEA193",
+    menu: "./assets/menus/thefatguys.jpg",
+    social: {
+        instagram: "https://www.instagram.com/nadiashairshop/",
+        facebook: "",
+        tiktok:""
+    },
+    description: `Random Hair Salon in the middle of the foodzone. Only business that 
+                has worked in the foozone beside food places`,
+    hours: {
+        monday: ["10:30am","9:00pm"],
+        tuesday: ["10:30am","10:02pm"],
+        wednesday: ["10:30am","9:00pm"],
+        thursday: ["10:30am","9:00pm"],
+        friday: ["10:30am","9:00pm"],
+        saturday: ["10:30am","9:00pm"],
+        sunday: ["10:30am","9:00pm"]
+    }
+}
 
 ];
