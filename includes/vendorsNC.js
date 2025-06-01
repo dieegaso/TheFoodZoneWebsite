@@ -71,7 +71,7 @@ export const businessesNC = [
         thursday: ["10:30am","9:00pm"],
         friday: ["10:30am","9:00pm"],
         saturday: ["10:30am","9:00pm"],
-        sunday: ["10:30am","9:00pm"]
+        sunday: []
     }
 
 

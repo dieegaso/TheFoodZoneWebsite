@@ -297,7 +297,8 @@ function createEventContainer() {
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            font-weight: 800;
+            font-weight: 600;
+            font-size: 1.25rem;
             color: var(--third-pale-color);
             width:20px;
             height:20px;
@@ -324,8 +325,8 @@ function createEventContainer() {
         eventcard.innerHTML = `
             <div class="events" style="${containerStyle}">
                 ${eventImgHtml}
-                <h2 class="event-title" style="${eventTitleStyle}">${event.name}</h2>
                 <p class="event-description" style="${eventDescripStyle}">${event.description}</p>
+                <a class="event-title" id="add-calendar2-${index}" style="${eventTitleStyle}">${event.name}</a>
                 ${eventDateHtml}
                 <div class="event-location" style="${eventLocationStyle}">${event.location}</div>
                 ${event.date.length < 2? `
@@ -338,6 +339,7 @@ function createEventContainer() {
         eventContainerhtml.appendChild(eventcard);
 
         const calendarLink = document.getElementById(`add-calendar-${index}`);
+        const calendarLink2 = document.getElementById(`add-calendar2-${index}`);
     
         if(event.date.length < 2){
             const icsContent = createICS(event);
@@ -345,6 +347,7 @@ function createEventContainer() {
             const url = URL.createObjectURL(blob);
 
             calendarLink.href = url;
+            calendarLink2.href = url;
 
             calendarLink.addEventListener("click", () => {
                 setTimeout(() => URL.revokeObjectURL(url), 1500);
@@ -394,12 +397,11 @@ function createBusinessCards(){
         `)
         .join("");
 
-
         card.innerHTML = `
             <div class= "cards">
                 <img class="business-logo" src="${biz.logo}" alt="${biz.name} logo">
-                <h3 class="b-name">${biz.name}</h3>
-                <a class="vn" href="#grid-map-${mapRefMod}" style="box-shadow: inset -5px 5px 10px -5px ${color};">${biz.num}</a>
+                <a class="b-name" href="#grid-map-${mapRefMod}">${biz.name}</a>
+                <a class="vn" href="#grid-map-${mapRefMod}" id="vn-${biz.num}">${biz.num}</a>
                 <p class="description">${biz.description}</p>
                 ${biz.menu ? `
                     <div class="menus">
@@ -421,6 +423,19 @@ function createBusinessCards(){
     
         vendorContainer.appendChild(card);
 
+        let headerStyle = document.createElement("style");
+        headerStyle.innerText =`
+            #vn-${biz.num}{
+                color: ${biz.mainColor}
+            }
+
+            #vn-${biz.num}::after{
+                background: linear-gradient(${color} 0%,transparent 50%);
+            }
+        `;
+        document.head.appendChild(headerStyle);
+
+
         //card styles
         const h2 = card.querySelector(".b-name");
         h2.style.color = biz.mainColor;
@@ -433,7 +448,9 @@ function createBusinessCards(){
 
         //highlight grid cell on map
         const link = card.querySelector(".vn");
+        h2.addEventListener("click", () => highlightNum(biz.num));
         link.addEventListener("click", () => highlightNum(biz.num));
+
 
 
     });
@@ -564,7 +581,7 @@ async function highlightNum(num) {
     const gridNum = document.getElementById(`b-${num}`);
     const highlight = "rgba(0,0,0,0.25)";
     const clear = "rgba(0,0,0,0)";
-    for(let i = 0; i<3; i++){
+    for(let i = 0; i<5; i++){
         await delay(500);
         gridNum.style.backgroundColor = highlight;
         await delay(500);
@@ -715,8 +732,8 @@ if(currentPage !== "The FoodZone Park"){
                 
                 
                 const logoContainer =`
-                    width:150px;
-                    height:150px;
+                    width:200px;
+                    height:200px;
                     display: flex;
                     flex-wrap: wrap;
                     gap: 5px;
@@ -728,11 +745,12 @@ if(currentPage !== "The FoodZone Park"){
                     box-shadow: -5px 5px 10px rgba(0,0,0,0.5), 5px -5px 10px rgba(0,0,0,0.5);
                 `;
                 const imageStyle = `
-                    max-height: 100%;
+                    // max-height: 100%;
                     max-width: 75%;
                     object-fit: contain;
                     `;
                 const nameStyle = `
+                    width:100%;
                     justify-self:center; 
                     text-align: center;
                     margin:0 10px;
@@ -743,7 +761,7 @@ if(currentPage !== "The FoodZone Park"){
                     display: flex;
                     font-size: 0.5rem;
                     max-height: 75%;
-                    max-width: 100%;
+                    width: 100%;
                     justify-content: center;
                 `;
 
@@ -760,11 +778,12 @@ if(currentPage !== "The FoodZone Park"){
                         <div style="${logoContainer}">
                             ${businesses[index].logo ? 
                                 `
+                                <a class="business-name" href="#vendor-${businesses[index].num}" style="${nameStyle}" id="b-name-link">${businesses[index].name}</a>
                                 <a href="#vendor-${businesses[index].num}" style="${astyle}" id="vendor-search">
                                     <img src="${businesses[index].logo}" style="${imageStyle} ">
                                 </a>`:`
                                 <a href="#vendor-${businesses[index].num}" style="width: 100%; text-decoration: none; align-content:center; flex-grow:1;">
-                                    <h4 class="business-name" style="${nameStyle}">${businesses[index].name}</h4>
+                                    <a class="business-name" href="#vendor-${businesses[index].num}" style="${nameStyle}">${businesses[index].name}</a>
                                 </a>
                                 `}
                             <div class="dot" style="${dotStyle}"></div>
@@ -798,23 +817,27 @@ if(currentPage !== "The FoodZone Park"){
 
                 setInterval(() => {
                     vendorMapPreview.remove()
-                }, 400000);
+                }, 3500);
 
                 vendorMapPreview.addEventListener("click",()=>{
                     vendorMapPreview.remove();
                 })
 
                 let venSearch = document.getElementById("vendor-search");
-                venSearch.addEventListener("click", () => {
+                let venSearch2 = document.getElementById("b-name-link");
+                venSearch.addEventListener("click", activeVenTab);
+                venSearch2.addEventListener("click", activeVenTab);
+
+                function activeVenTab(){
                     if (!vendorStatus) {
-                        let eventContainer = document.getElementById("events-container");
-                        eventContainer.innerHTML= "";
-                        document.querySelector('head style').textContent = "";
-                        vendorStatus = true;
-                        vendorContainer.style.display = "";
-                        createNavigationVendorStyle();
+                    let eventContainer = document.getElementById("events-container");
+                    eventContainer.innerHTML= "";
+                    document.querySelector('head style').textContent = "";
+                    vendorStatus = true;
+                    vendorContainer.style.display = "";
+                    createNavigationVendorStyle();
                     }
-                });
+                }
 
             })
         })

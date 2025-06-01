@@ -137,9 +137,8 @@ header{
 }
 .locations a{
     width: 100%;
-    /* color: rgb(49, 152, 221); */
-    font-weight: 600;
     font-size: 1.25rem;
+    color: var(--third-pale-color);
 }
 
 #gt-animation{
@@ -347,14 +346,16 @@ header{
     justify-items: center;
 }
 
-.vendors h3{ /*business name */
+.b-name{ /*business name */
     grid-area: t;
     margin: 0 0 30px 0;
-    font-size: 2em;
+    font-size: 1.5rem;
+    font-weight: bold;
     justify-self: left;
 }
 
 .vn { /*vendor-number */
+    position: relative;
     grid-area: v;
     justify-self: right;
     align-self: flex-start;
@@ -365,9 +366,37 @@ header{
     font-size: 2rem;
     font-weight: 900;
     border-radius: 50%;
-    /* box-shadow: inset -5px 5px 10px -5px rgba(145, 25, 25, 0.12); */
-    color: rgba(0,0,0, 0.25);
+    /* color: rgba(0,0,0, 0.25); */
     text-decoration: none;
+    background-color: var(--main-color);
+}
+
+.vn::after{
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 56px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    /* background: linear-gradient(rgb(106, 219, 106) 0%,transparent 50%); */
+    filter: blur(1px);
+    z-index: -1;
+
+    animation-name: rotateVN;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotateVN {
+    from{
+
+    }
+    to{
+        transform: rotate(360deg);
+    }
+    
 }
 
 .business-logo{ /*business logo */
