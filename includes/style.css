@@ -17,52 +17,18 @@
 html {
     scroll-behavior: smooth;
     background-color: var(--main-color);
+    font-family: Poppins;
 }
 
 body {
     margin: 0;
-    font-family: Poppins;
 }
 
 header{
     background-color: var(--sec-color);
 }
 
-#index-header{
-    height: 90vh;
-}
-#intro-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-content: center;
-    height: 100%;
-}
-
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.welcome-text-container{
-    justify-items: center;
-    padding: 2rem 1rem;
-
-}
-
-#welcome-text{
-    margin: 0;
-    text-align: center;
-    max-width: 400px;
-}
-
-#fz-logo{
-    max-width: min(100%,400px);
-}
-
-
-/* #region top header */ 
+/* Top Nav bar */
 .top-bar{
     position: sticky;
     top: 0;
@@ -74,11 +40,6 @@ header{
     gap: 20px;
 }
 
-.top-bar a{
-    display: flex;
-    align-items: center;
-}
-
 .header-icons{
     width: 20px;
 }
@@ -87,6 +48,29 @@ header{
     width: 40px;
 }
 
+/* HomePage intro */
+#intro-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
+    height: 90vh;
+}
+
+#fz-logo{
+    max-width: min(100%,400px);
+}
+
+#welcome-text{
+    margin: 0;
+    text-align: center;
+    max-width: 400px;
+}
+
+
+/* Location Introduction  */
 .header-img-container{
     position: relative;
     display: flex;
@@ -105,19 +89,28 @@ header{
     top: 0;
     right: 0;
     text-align: right;
-    padding: 1rem 5% 1rem 0 ;
+    padding: 1rem 5% 1rem ;
     color: rgb(255, 255, 255);
     text-shadow: -3px 3px black;
     font-size: clamp(2rem,8.5vw,4rem);
 }
 
+.location-front-text{
+    margin: 0;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-weight: 400;
+    background-color: var(--sec-color);
+}
 
-/* #endregion */
 
-/* #region main page */
+
+/* vendor and event tab */
 #navigation-container-section{
     width: 100%;
 }
+
+/* #region main page */
 
 .no-events{
     text-align: center;
@@ -140,26 +133,25 @@ header{
     font-size: 1.25rem;
     color: var(--third-pale-color);
 }
-
-#gt-animation{
-    animation-duration: 3s;
+.location-tag{
     animation-name: zoom;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 #p-animation{
-    animation-duration: 3s;
-    animation-name: zoom;
-    animation-delay: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+.location-tag:hover{
+    animation-play-state: paused;
 }
 
 @keyframes zoom{
-    0%{
-
+    from{
     }
-    100%{
+    to{
         transform: scale(1.075);
     }
 }
@@ -168,14 +160,6 @@ header{
     max-width: 90%;
     border-radius: 20px;
     box-shadow: -2px 2px 10px rgba(0,0,0, 0.25);
-}
-
-.location-front-text{
-    margin: 0;
-    padding: 2rem 1rem;
-    text-align: center;
-    font-weight: 400;
-    background-color: var(--sec-color);
 }
 
 
@@ -354,7 +338,7 @@ header{
     justify-self: left;
 }
 
-.vn { /*vendor-number */
+.vn-0,.vn-1 { /*vendor-number */
     position: relative;
     grid-area: v;
     justify-self: right;
@@ -368,10 +352,10 @@ header{
     border-radius: 50%;
     /* color: rgba(0,0,0, 0.25); */
     text-decoration: none;
-    background-color: var(--main-color);
+    background: radial-gradient(var(--main-color) 0%, var(--main-color) 75%, transparent);
 }
 
-.vn::after{
+.vn-1::after, .vn-0::after{
     content: "";
     position: absolute;
     top: -3px;
@@ -379,24 +363,42 @@ header{
     width: 56px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    /* background: linear-gradient(rgb(106, 219, 106) 0%,transparent 50%); */
     filter: blur(1px);
     z-index: -1;
+    
+}
 
+.vn-1::after{
+    background: linear-gradient(-115deg, #80EF80 0%,transparent 50%);
     animation-name: rotateVN;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.vn-0::after{
+    background: radial-gradient(#FA5053 0%, transparent 75%);
+    animation-name: pulse;
     animation-duration: 2s;
+    animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
 @keyframes rotateVN {
     from{
-
     }
     to{
         transform: rotate(360deg);
+    } 
+}
+
+@keyframes pulse {
+    from{
+
     }
-    
+    to{
+        scale:1.2
+    }
 }
 
 .business-logo{ /*business logo */

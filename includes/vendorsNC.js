@@ -13,7 +13,7 @@ export const businessesNC = [
     description: `We sell alchohol here for a lot of money and it is really expensive and nobody seems to care 
                  that we charge 15 dollars for a margarita that costs us the same 15 to make a full batch (THATS CRAZY)`,
     hours: {
-        monday: ["10:30am","9:00pm"],
+        monday: ["12:00am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
         wednesday: ["10:30am","11:58pm"],
         thursday: ["10:30am","9:00pm"],

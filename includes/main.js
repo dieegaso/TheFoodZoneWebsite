@@ -373,10 +373,10 @@ function createBusinessCards(){
         let color,state;
         if(isOpenNow(biz)){
             color = "#80EF80";
-            state = "Open";
+            state = true;
         }else{
             color = "#FA5053";
-            state = "Closed";
+            state = false;
         }
 
         // Remove "Monday:", "Tuesday:", etc. from the hours
@@ -400,8 +400,8 @@ function createBusinessCards(){
         card.innerHTML = `
             <div class= "cards">
                 <img class="business-logo" src="${biz.logo}" alt="${biz.name} logo">
-                <a class="b-name" href="#grid-map-${mapRefMod}">${biz.name}</a>
-                <a class="vn" href="#grid-map-${mapRefMod}" id="vn-${biz.num}">${biz.num}</a>
+                <a class="b-name" href="#grid-map-${mapRefMod}" style="color:${biz.mainColor};">${biz.name}</a>
+                <a class="vn-${Number(state)}" href="#grid-map-${mapRefMod}" id="vn-${biz.num}" style="color:${biz.mainColor};">${biz.num}</a>
                 <p class="description">${biz.description}</p>
                 ${biz.menu ? `
                     <div class="menus">
@@ -423,23 +423,7 @@ function createBusinessCards(){
     
         vendorContainer.appendChild(card);
 
-        let headerStyle = document.createElement("style");
-        headerStyle.innerText =`
-            #vn-${biz.num}{
-                color: ${biz.mainColor}
-            }
-
-            #vn-${biz.num}::after{
-                background: linear-gradient(${color} 0%,transparent 50%);
-            }
-        `;
-        document.head.appendChild(headerStyle);
-
-
         //card styles
-        const h2 = card.querySelector(".b-name");
-        h2.style.color = biz.mainColor;
-        
         const menu = card.querySelector(".menu-s");
         menu.style.cssText = `
             background-color: ${biz.mainColor+"50"};
@@ -447,12 +431,8 @@ function createBusinessCards(){
         
 
         //highlight grid cell on map
-        const link = card.querySelector(".vn");
+        const h2 = card.querySelector(".b-name");
         h2.addEventListener("click", () => highlightNum(biz.num));
-        link.addEventListener("click", () => highlightNum(biz.num));
-
-
-
     });
 }
 
