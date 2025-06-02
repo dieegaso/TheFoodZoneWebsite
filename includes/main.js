@@ -399,7 +399,7 @@ function createBusinessCards(){
 
         card.innerHTML = `
             <div class= "cards">
-                <img class="business-logo" src="${biz.logo}" alt="${biz.name} logo">
+                <img class="business-logo" src="${biz.logo}" loading="lazy" alt="${biz.name} logo">
                 <a class="b-name" href="#grid-map-${mapRefMod}" style="color:${biz.mainColor};">${biz.name}</a>
                 <a class="vn-${Number(state)}" href="#grid-map-${mapRefMod}" id="vn-${biz.num}" style="color:${biz.mainColor};">${biz.num}</a>
                 <p class="description">${biz.description}</p>

@@ -152,7 +152,7 @@ header{
     from{
     }
     to{
-        transform: scale(1.075);
+        scale: 1.075;
     }
 }
 
@@ -411,7 +411,6 @@ header{
 .description{ /*Description */
     grid-area: p;
     margin: 1.5rem 0 4rem 0;
-    text-align: justify;
     font-size: clamp(1rem,1.5vw,1.15rem);
 }
 

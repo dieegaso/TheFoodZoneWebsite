@@ -25,7 +25,7 @@ export const businessesNC = [
 {
     num: 2,
     name: "Infuzion Bubble Tea",
-    logo: "assets/businesslogos/infuzion.png",
+    logo: "assets/businesslogos/infuzion.webp",
     mainColor: "#77DD77",
     menu: "./assets/menus/raicez.png",
     social: {
@@ -282,12 +282,12 @@ export const businessesNC = [
                 `,
     hours: {
         monday: [],
-        tuesday: ["10:30am","9:00pm"],
-        wednesday: ["10:30am","9:00pm"],
-        thursday: ["10:30am","9:00pm"],
-        friday: ["10:30am","9:00pm"],
-        saturday: ["10:30am","9:00pm"],
-        sunday: ["10:30am","9:00pm"]
+        tuesday: [],
+        wednesday: [],
+        thursday: [],
+        friday: [],
+        saturday: [],
+        sunday: []
     }
 },
 {
