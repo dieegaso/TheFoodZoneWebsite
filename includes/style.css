@@ -28,6 +28,12 @@ header{
     background-color: var(--sec-color);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Top Nav bar */
 .top-bar{
     position: sticky;
@@ -52,7 +58,8 @@ header{
 #intro-container{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 2rem;
     height: 100%;
@@ -60,7 +67,7 @@ header{
 }
 
 #fz-logo{
-    max-width: min(100%,400px);
+    max-width: min(100%,800px);
 }
 
 #welcome-text{
@@ -128,36 +135,19 @@ header{
     text-align: center;
     align-items: center;
 }
-.locations a{
+
+.location-tag{
     width: 100%;
     font-size: 1.25rem;
     color: var(--third-pale-color);
 }
-.location-tag{
-    animation-name: zoom;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
 
-#p-animation{
-    animation-delay: 2s;
-}
-
-.location-tag:hover{
-    animation-play-state: paused;
-}
-
-@keyframes zoom{
-    from{
-    }
-    to{
-        scale: 1.075;
-    }
+.imgcontainer{
+    padding: 1rem;
 }
 
 .location-img{
-    max-width: 90%;
+    max-width: 100%;
     border-radius: 20px;
     box-shadow: -2px 2px 10px rgba(0,0,0, 0.25);
 }
@@ -464,9 +454,9 @@ header{
 
 /* #endregion*/
 
-section{
-    max-width: 500px;
-}
+/* section{
+    max-width: min(800px,100%);
+} */
 
 .section-title{
     color: var(--third-color);
@@ -478,12 +468,17 @@ section{
 
 .front-page-text{
     padding: 0 1.5rem;
-    text-align: justify;
     text-indent: 1ch;
 }
 
 .front-page-section{
     padding:2rem 1rem; 
+}
+
+@media (min-width: 500px ) {
+    .front-page-section{
+        padding:2rem 30%; 
+}
 }
 
 #section-pet{
