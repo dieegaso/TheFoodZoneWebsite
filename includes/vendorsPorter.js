@@ -10,11 +10,7 @@ export const businessesP = [
         facebook: "http://facebook.com/infuzionteabar",
         tiktok:""
     },
-    description: `It has flavor ddepending on who makes it for you. When 
-                    the worker says that the churros take ten minutes COME BACK TEN MINUTES LATER
-                    you do not need to stand outside looking in like a dumbass. we are a team driv
-                    en by our team and bosses, just please come an hour before closing. 
-                    p.s. the cookies and cream is better at jessie's burgers`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -36,8 +32,7 @@ export const businessesP = [
         facebook: "http://facebook.com/tacoslaabuelatx/",
         tiktok:""
     },
-    description: `Comida mexicana, le echamos chingo de carne a sus pedidos porque es de la carne mas barata
-                que venden en la michoacana. AQUI NUNCA SE CIERRA PERRO 24/7/365`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -60,9 +55,7 @@ export const businessesP = [
         facebook: "http://facebook.com/jessesburgershake",
         tiktok:""
     },
-    description: `We Sell burgers that are mid, but they are the best at the foodzone,
-                  We also have some good shakes that will leave you really thirsty.
-                  go get ice from the raicez place for your drinks`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -85,9 +78,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `We Sell burgers that are mid, but they are the best at the foodzone,
-                  We also have some good shakes that will leave you really thirsty.
-                  go get ice from the raicez place for your drinks`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -110,9 +101,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `Food here is great, and fair price as well (at least for the people that work at raicez.
-                  The owner is a pretty chill guy but we are pretty sure he is racist, but he just pretend
-                  he is not)`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -136,9 +125,7 @@ export const businessesP = [
         facebook: "https://www.facebook.com/profile.php?id=61573770003327&rdid=XO05Rv0WEsdK0tpY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F191E4B4aD9%2F#",
         tiktok:"https://www.tiktok.com/@ivycoffee.co"
     },
-    description: `Food here is great, and fair price as well (at least for the people that work at raicez.
-                  The owner is a pretty chill guy but we are pretty sure he is racist, but he just pretend
-                  he is not)`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -161,9 +148,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `Food here is great, and fair price as well (at least for the people that work at raicez.
-                  The owner is a pretty chill guy but we are pretty sure he is racist, but he just pretend
-                  he is not)`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -186,9 +171,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `Food here is great, and fair price as well (at least for the people that work at raicez.
-                  The owner is a pretty chill guy but we are pretty sure he is racist, but he just pretend
-                  he is not)`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -211,8 +194,7 @@ export const businessesP = [
         facebook: "http://facebook.com/raicezbar",
         tiktok: "https://www.tiktok.com/@raicezbarandwine"
     },
-    description: `We sell alchohol here for a lot of money and it is really expensive and nobody seems to care 
-                 that we charge 15 dollars for a margarita that costs us the same 15 to make a full batch (THATS CRAZY)`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -234,9 +216,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `Food here is great, and fair price as well (at least for the people that work at raicez.
-                  The owner is a pretty chill guy but we are pretty sure he is racist, but he just pretend
-                  he is not)`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -259,8 +239,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `We Sell BBQ here and we are about to go broke because we do not
-                    get many customers. idk why, its sus`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -283,10 +262,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
-                 We also give you beans with your tacos that all you gonna do with them is throw them away
-                 because eso es comida de chanchos
-                `,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -309,9 +285,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `We sell some good wings here, we also have huge menus in our wall so that you dont be 
-                asking stupid questions. The place is a really dirty inside but who cares. DONT FORGET
-                YOU'RE WINGS`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -333,9 +307,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `We sell some good wings here, we also have huge menus in our wall so that you dont be 
-                asking stupid questions. The place is a really dirty inside but who cares. DONT FORGET
-                YOU'RE WINGS`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -357,9 +329,7 @@ export const businessesP = [
         facebook: "http://facebook.com/thefatguyz.tx",
         tiktok:""
     },
-    description: `We sell all kinds of stuff here, we dont even know exactly 
-                what. We dont include prices in our menu to not scare you away lol.
-                The owner is an annoying guy btw, very entitled`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -381,9 +351,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `We sell all kinds of stuff here, we dont even know exactly 
-                what. We dont include prices in our menu to not scare you away lol.
-                The owner is an annoying guy btw, very entitled`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -405,9 +373,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `We sell all kinds of stuff here, we dont even know exactly 
-                what. We dont include prices in our menu to not scare you away lol.
-                The owner is an annoying guy btw, very entitled`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -429,9 +395,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `We sell all kinds of stuff here, we dont even know exactly 
-                what. We dont include prices in our menu to not scare you away lol.
-                The owner is an annoying guy btw, very entitled`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -454,10 +418,7 @@ export const businessesP = [
         facebook: "https://www.facebook.com/profile.php?id=100091666042616&ref=_ig_profile_ac",
         tiktok:""
     },
-    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
-                 We also give you beans with your tacos that all you gonna do with them is throw them away
-                 because eso es comida de chanchos
-                `,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: [],
         tuesday: ["10:30am","9:00pm"],
@@ -480,10 +441,7 @@ export const businessesP = [
         facebook: "https://www.facebook.com/profile.php?id=100091666042616&ref=_ig_profile_ac",
         tiktok:""
     },
-    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
-                 We also give you beans with your tacos that all you gonna do with them is throw them away
-                 because eso es comida de chanchos
-                `,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: [],
         tuesday: ["10:30am","9:00pm"],
@@ -506,10 +464,7 @@ export const businessesP = [
         facebook: "https://www.facebook.com/rey.tortas.2025/",
         tiktok:""
     },
-    description:`Best place to get tacos. We only sell one kind of meat but that is all you need really,
-                 We also give you beans with your tacos that all you gonna do with them is throw them away
-                 because eso es comida de chanchos
-                `,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: [],
         tuesday: ["10:30am","9:00pm"],
@@ -531,8 +486,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `Random Hair Salon in the middle of the foodzone. Only business that 
-                has worked in the foozone beside food places`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],
@@ -555,8 +509,7 @@ export const businessesP = [
         facebook: "",
         tiktok:""
     },
-    description: `Random Hair Salon in the middle of the foodzone. Only business that 
-                has worked in the foozone beside food places`,
+    description: `[Food Truck Name] serves fresh, fast, and tasty street food. Simple menu, bold flavor, good vibes. Grab a bite and enjoy!`,
     hours: {
         monday: ["10:30am","9:00pm"],
         tuesday: ["10:30am","10:02pm"],

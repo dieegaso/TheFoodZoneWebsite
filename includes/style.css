@@ -478,7 +478,7 @@ section{
 
 .front-page-text{
     padding: 0 1.5rem;
-    text-align: justify;
+    text-align: left;
     text-indent: 1ch;
 }
 
