@@ -114,7 +114,7 @@ main {
 
 /* vendor and event tab */
 #navigation-container-section{
-    width: 100%;
+    max-width: 1200px;
 }
 
 /* #region main page */

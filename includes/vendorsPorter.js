@@ -2,7 +2,7 @@ export const businessesP = [
 {
     num: 1,
     name: "Infuzion Bubble Tea",
-    logo: "assets/businesslogos/infuzion.png",
+    logo: "assets/businesslogos/infuzion.webp",
     mainColor: "#77DD77",
     menu: "./assets/menus/raicez.png",
     social: {
